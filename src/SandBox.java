@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class SandBox {
     
     public static void main(String[] args) {
-      ArrayList<String> words = FileHelper.readFile("words.txt");
+      ArrayList<String> words = FileHelper.readFile("words.txt", false);
       for(String s: words)
           System.out.println(s);
       
@@ -12,7 +12,7 @@ public class SandBox {
       stuff.add("appple");  
       stuff.add("ball");
       stuff.add("car");
-      FileHelper.writeFile("test.txt", words);
+      FileHelper.listToFile("test.txt", words);
       
       Product p=new Product("ding dongs", "12a34f5", 2.5);
       System.out.println(p.getFormattedPrice());
